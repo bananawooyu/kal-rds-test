@@ -19,12 +19,12 @@ resource "aws_db_instance" "this" {
 }
 
 data "tfe_workspace" "test-workspace" {
-  name         = "kal-rds-test"
+  name         = "kal-vault-rds-test"
   organization = "tf-cn"
 }
 
 data "tfe_workspace" "test-sourceable" {
-  name         = "kal-vault-rds-test"
+  name         = "kal-rds-test"
   organization = "tf-cn"
 }
 
