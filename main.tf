@@ -18,17 +18,17 @@ resource "aws_db_instance" "this" {
   skip_final_snapshot = true
 }
 
-data "tfe_workspace" "test-workspace" {
-  name         = "kal-vault-rds-test"
-  organization = "tf-cn"
-}
+# data "tfe_workspace" "test-workspace" {
+#   name         = "kal-vault-rds-test"
+#   organization = "tf-cn"
+# }
 
-data "tfe_workspace" "test-sourceable" {
-  name         = "kal-rds-test"
-  organization = "tf-cn"
-}
+# data "tfe_workspace" "test-sourceable" {
+#   name         = "kal-rds-test"
+#   organization = "tf-cn"
+# }
 
-resource "tfe_run_trigger" "test" {
-  workspace_id  = data.tfe_workspace.test-workspace.id
-  sourceable_id = data.tfe_workspace.test-sourceable.id
-}
+# resource "tfe_run_trigger" "test" {
+#   workspace_id  = data.tfe_workspace.test-workspace.id
+#   sourceable_id = data.tfe_workspace.test-sourceable.id
+# }
